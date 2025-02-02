@@ -5,7 +5,7 @@
 }
 nav {
     display: flex;
-    justify-content: flex-start; /* Aligns items to the left */
+    justify-content: flex-start;
     align-items: center;
     background: black;
     padding: 10px 20px;
@@ -20,7 +20,7 @@ nav {
   nav img {
     height: 80px;
     width: auto;
-    margin-right: 60px; /* Adds 30px space between the logo and navigation links */
+    margin-right: 60px; 
   }
   
   nav ul {
@@ -96,4 +96,48 @@ nav {
       font-size: 16px;
     }
   }
+.settings-modal .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 999;
+}
+
+/* The actual popup window */
+.settings-modal .settings-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the modal */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures the modal is above the overlay */
+  width: 300px;
+  text-align: center;
+}
+
+.settings-modal .theme-toggle {
+  margin: 20px 0;
+}
+
+.settings-modal .close-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.settings-modal .close-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
   
