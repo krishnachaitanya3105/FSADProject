@@ -138,6 +138,16 @@ nav {
   background-color: #0056b3;
 }
 
+.settings-modal .settings-window {
+  color: #000000; 
+}
+
+.settings-modal .theme-toggle label,
+.settings-modal h2 {
+  color: #000000; 
+}
+
+
 
 
   
