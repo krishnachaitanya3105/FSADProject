@@ -2,7 +2,7 @@ function Podcasts()
 {
     return(
         <>
-        <h1>hi</h1>
+        <h1>Coming soon...</h1>
         </>
     )
 }
