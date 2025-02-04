@@ -14,6 +14,7 @@ function App() {
   const [showSettings, setShowSettings] = useState(false);
  
   return ( 
+    <>
     <Router>
       <nav>
         <img src={Photo} alt='Logo'/>
@@ -58,6 +59,12 @@ function App() {
 
 
     </Router>
+    <footer>
+        <p className='footer'>&copy; 2025 My Music Platform. All rights reserved.</p>
+    </footer>
+
+    
+    </>
     
   )
 }
