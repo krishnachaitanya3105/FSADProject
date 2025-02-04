@@ -1,123 +1,140 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 nav {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background: black;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    height: 15vh;
-  }
-  
-  nav img {
-    height: 80px;
-    width: auto;
-    margin-right: 60px; 
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    display: inline-block;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    display: inline-block;
-  }
-  
-  nav ul li a:hover {
-    background-color: #444;
-    color: #61dafb;
-    transform: scale(1.05);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  nav ul li a.active {
-    background-color: #61dafb;
-    color: #282c34;
-    font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 15vh;
+}
+
+nav img {
+  height: 80px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  background-color: #444;
+  color: #61dafb;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a.active {
+  background-color: #61dafb;
+  color: #282c34;
+  font-weight: 700;
+}
+
+nav .search {
+  border-radius: 10px;
+  height: 30px;
+  padding: 5px 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  nav {
+      flex-direction: column;
+      height: auto;
   }
 
-  nav .search{
-    margin-left: 580px;
-    border-radius: 10px;
-    height: 30px;
-    padding: 5px 10px; 
-    
+  nav img {
+      height: 70px;
   }
-  
-  @media (max-width: 768px) {
-    nav {
+
+  nav ul {
+      gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
       flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
-    }
-  
-    nav img {
+      align-items: center;
+  }
+
+  nav img {
       height: 60px;
-      margin-right: 0;
       margin-bottom: 10px;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      gap: 15px;
-      width: 100%;
-      text-align: left;
-    }
-  
-    nav ul li {
-      width: 100%;
-    }
-  
-    nav ul li a {
-      padding: 10px;
-      font-size: 16px;
-    }
   }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+  }
+
+  nav .search {
+      width: 80%;
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+      gap: 10px;
+  }
+
+  nav ul li a {
+      font-size: 14px;
+      padding: 8px;
+  }
+}
+
+/* Settings Modal */
 .settings-modal .overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
-/* The actual popup window */
 .settings-modal .settings-window {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centers the modal */
+  transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Ensures the modal is above the overlay */
-  width: 300px;
+  z-index: 1000;
+  width: 80%;
+  max-width: 400px;
   text-align: center;
 }
 
@@ -139,15 +156,10 @@ nav {
 }
 
 .settings-modal .settings-window {
-  color: #000000; 
+  color: #000;
 }
 
 .settings-modal .theme-toggle label,
 .settings-modal h2 {
-  color: #000000; 
+  color: #000;
 }
-
-
-
-
-  
