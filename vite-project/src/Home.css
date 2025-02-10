@@ -1,0 +1,123 @@
+/* General container styling */
+.home-container {
+  padding: 40px 20px; /* Top/Bottom: 40px, Left/Right: 20px */
+  text-align: center;
+  min-height: 100vh;
+   /* Consistent dark theme */
+  color: white;
+  font-family: "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Title styling */
+.featured-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px; /* Extra bottom gap below the title */
+  color: #1db954; /* Spotify-inspired green */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Song list grid layout */
+.song-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 songs per row */
+  gap: 20px; /* Larger gaps between rows and columns */
+  justify-items: center;
+  padding: 20px; /* Top/Bottom/Left/Right gap for the entire grid */
+}
+
+/* Song card styling */
+.song-card {
+  background: #1a1a1a; /* Dark gray card background */
+  padding: 15px; /* Inside spacing for card content */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 160px; /* Slightly wider card for a balanced look */
+}
+
+.song-card:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+  margin-top: 5px; /* Small lift effect on hover */
+}
+
+/* Song cover placeholder */
+.song-cover {
+  width: 100%;
+  height: 100px;
+  background: #333; /* Placeholder gray */
+  border-radius: 8px;
+  margin-bottom: 15px; /* Spacing below the cover image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+/* Song information styling */
+.song-info {
+  margin-bottom: 10px;
+}
+
+.song-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5px 0;
+  color: white;
+}
+
+.song-artist {
+  font-size: 0.85rem;
+  color: #b3b3b3;
+}
+
+/* Play button */
+.play-button {
+  background: #1db954; /* Spotify-inspired green */
+  color: white;
+  border: none;
+  padding: 8px 12px; /* Larger button size for better usability */
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 10px; /* Space between button and content above */
+}
+
+.play-button:hover {
+  background: #1ed760; /* Brighter green on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Audio player styling */
+audio {
+  margin-top: 30px; /* Space above the audio player */
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: white;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 900px) {
+  .song-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 songs per row on smaller screens */
+    padding: 15px; /* Adjusted padding for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .song-list {
+    grid-template-columns: repeat(1, 1fr); /* 1 song per row on very small screens */
+    padding: 10px; /* Further reduced padding for very small screens */
+  }
+
+  .song-card {
+    width: 100%; /* Make the cards take the full width */
+  }
+}

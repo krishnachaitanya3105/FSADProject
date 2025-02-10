@@ -12,6 +12,7 @@ import Settings from './Settings.jsx';
 import AdminDashboard from "./AdminDashboard.jsx";
 
 
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false); 
   const [showPopup, setShowPopup] = useState(false);
@@ -67,11 +68,13 @@ function App() {
 
             {showSettings && <Settings onClose={() => setShowSettings(false)} />}
 
+
+          
             <footer>
-  <p className="footer">
-  © 2025 My Music Platform. All rights reserved | Enjoy endless music, anytime, anywhere.
-  </p>
-</footer>
+            <p className="footer">
+             © 2025 My Music Platform. All rights reserved | Enjoy endless music, anytime, anywhere.
+            </p>
+            </footer>
           </>
           
         )}
